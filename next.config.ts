@@ -2,18 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  images: {
-    formats: ["image/avif", "image/webp"],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
-  },
-  typescript: {
-    ignoreBuildErrors: false,
-  },
+  output: "export",
+  images: { unoptimized: true },
+  typescript: { ignoreBuildErrors: false },
 };
 
 export default nextConfig;
