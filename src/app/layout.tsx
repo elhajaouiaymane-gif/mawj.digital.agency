@@ -1,9 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Fraunces } from "next/font/google";
 import { SmoothScrollProvider } from "@/components/providers/scroll-provider";
-import { CustomCursor } from "@/components/cursor/CustomCursor";
 import { Navbar } from "@/components/navigation/Navbar";
-import { ScrollProgress } from "@/components/ui/scroll-progress";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -52,8 +50,6 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-ocean text-pearl overflow-x-hidden">
         <SmoothScrollProvider>
-          <CustomCursor />
-          <ScrollProgress />
           <Navbar />
           <main className="flex-1">{children}</main>
         </SmoothScrollProvider>
