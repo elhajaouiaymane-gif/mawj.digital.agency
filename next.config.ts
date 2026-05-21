@@ -1,10 +1,12 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: "export",
   images: { unoptimized: true },
-  typescript: { ignoreBuildErrors: false },
+  turbopack: { root: process.cwd() },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

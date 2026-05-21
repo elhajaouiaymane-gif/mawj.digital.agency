@@ -1,27 +1,115 @@
-import { Code, Palette, Smartphone, TrendingUp, Zap, Globe } from "lucide-react";
+"use client";
 
-const services = [
-  { icon: Code, title: "Web Development", desc: "Next.js, React, fullstack." },
-  { icon: Palette, title: "UI/UX Design", desc: "Pixel-perfect interfaces." },
-  { icon: Smartphone, title: "Mobile Apps", desc: "React Native solutions." },
-  { icon: TrendingUp, title: "Digital Marketing", desc: "Data-driven growth." },
-  { icon: Zap, title: "Performance", desc: "Speed optimization." },
-  { icon: Globe, title: "Branding", desc: "Brand identity strategy." },
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
+
+const serviceData = [
+  {
+    id: "direction",
+    num: "01",
+    sub: [
+      "Creative Direction",
+      "Art Direction",
+      "Brand Strategy",
+      "Visual Identity",
+    ],
+  },
+  {
+    id: "digital",
+    num: "02",
+    sub: [
+      "Web Experience",
+      "UI/UX Design",
+      "Motion & Animation",
+      "CGI & 3D",
+    ],
+  },
+  {
+    id: "offline",
+    num: "03",
+    sub: [
+      "Immersive Events",
+      "Print & Editorial",
+      "Spatial Design",
+      "Packaging",
+    ],
+  },
 ];
 
-export default function Services() {
+const bgColors = [
+  "rgba(0,212,255,0.05)",
+  "rgba(255,184,0,0.05)",
+  "rgba(10,31,68,0.08)",
+];
+
+export function Services() {
+  const t = useTranslations("services");
+  const [open, setOpen] = useState<string | null>(null);
+
   return (
-    <section id="services" className="py-32 px-6 bg-ocean-light/20">
-      <div className="mx-auto max-w-5xl">
-        <p className="eyebrow mb-12 text-cyan">Our Services</p>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <div key={service.title} className="rounded-2xl border border-cyan/10 p-8 hover:border-cyan/30 transition-colors">
-              <service.icon className="mb-4 h-10 w-10 text-cyan" />
-              <h3 className="mb-2 text-xl font-semibold text-pearl">{service.title}</h3>
-              <p className="text-pearl/60">{service.desc}</p>
-            </div>
-          ))}
+    <section id="services" className="section-pad bg-cream">
+      <div className="max-w-[90vw] md:max-w-[80vw] mx-auto">
+        <div className="grid md:grid-cols-12 gap-10 md:gap-16">
+          <div className="md:col-span-2">
+            <div className="chapter-label text-cyan">{t("chapter")}</div>
+          </div>
+
+          <div className="md:col-span-10 space-y-0">
+            {serviceData.map((svc, idx) => {
+              const isOpen = open === svc.id;
+              return (
+                <div
+                  key={svc.id}
+                  className="border-t border-charcoal/10 last:border-b"
+                  style={{ backgroundColor: isOpen ? bgColors[idx] : "transparent" }}
+                >
+                  <button
+                    onClick={() => setOpen(isOpen ? null : svc.id)}
+                    className="w-full flex items-center gap-4 md:gap-8 py-6 md:py-8 text-left cursor-pointer group"
+                  >
+                    <span className="font-mono text-[12px] tracking-[0.3em] text-charcoal/30">
+                      {svc.num}
+                    </span>
+                    <span className="font-mono text-[11px] tracking-[0.25em] uppercase text-charcoal/50 w-16 md:w-20 shrink-0">
+                      {t(svc.id as "direction" | "digital" | "offline")}
+                    </span>
+                    <span className="heading-serif text-[clamp(2.5rem,6vw,5rem)] flex-1 group-hover:text-cyan transition-colors duration-300">
+                      {t(svc.id as "direction" | "digital" | "offline")}
+                    </span>
+                    <span className="font-mono text-[11px] tracking-[0.2em] text-charcoal/30 group-hover:text-cyan transition-colors">
+                      {isOpen ? "–" : "+"}
+                    </span>
+                  </button>
+
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.4, ease: [0.76, 0, 0.24, 1] }}
+                        className="overflow-hidden"
+                      >
+                        <div className="pb-8 md:pb-12 pl-[calc(3rem+4rem)] md:pl-[calc(5rem+6rem)]">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            {svc.sub.map((item) => (
+                              <div
+                                key={item}
+                                className="font-mono text-[12px] tracking-[0.15em] text-charcoal/60 py-1"
+                              >
+                                {item}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

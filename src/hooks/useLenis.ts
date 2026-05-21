@@ -22,12 +22,9 @@ export function useLenis() {
       lenisInstance.raf(time);
       requestAnimationFrame(raf);
     }
-
     requestAnimationFrame(raf);
 
-    return () => {
-      lenisInstance.destroy();
-    };
+    return () => lenisInstance.destroy();
   }, []);
 
   return lenis;

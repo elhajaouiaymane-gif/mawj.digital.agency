@@ -1,28 +1,70 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Fraunces } from "next/font/google";
-import { Navbar } from "@/components/navigation/Navbar";
+import { Inter, Fraunces, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
-const fraunces = Fraunces({ variable: "--font-fraunces", subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
+
+const jetbrains = JetBrains_Mono({
+  variable: "--font-jetbrains",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500"],
+});
 
 export const metadata: Metadata = {
-  title: "Mawj Digital Agency | Riding the Wave of Digital Excellence",
-  description: "Award-winning web design & development studio based in Casablanca. We craft digital waves that move the world.",
-  keywords: ["web design", "web development", "digital agency", "Casablanca", "creative agency"],
+  title: "Mawj Digital Agency | We craft digital waves that move the world.",
+  description:
+    "Award-winning editorial creative studio based in Casablanca, Paris & Dubai. We craft work that defines the now and shapes what is next.",
+  keywords: [
+    "Mawj", "digital agency", "creative studio", "Casablanca",
+    "web design", "editorial design", "Morocco", "Paris", "Dubai",
+  ],
   authors: [{ name: "Mawj Digital Agency" }],
-  openGraph: { title: "Mawj Digital Agency", description: "Riding the Wave of Digital Excellence", type: "website" },
+  openGraph: {
+    title: "Mawj Digital Agency",
+    description: "We craft digital waves that move the world.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Mawj",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mawj Digital Agency",
+    description: "We craft digital waves that move the world.",
+  },
+  robots: { index: true, follow: true },
 };
 
-export const viewport: Viewport = { themeColor: "#0A1F44", colorScheme: "dark" };
+export const viewport: Viewport = {
+  themeColor: "#F5F1E8",
+  colorScheme: "light",
+};
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-ocean text-pearl overflow-x-hidden">
-        <Navbar />
-        <main className="flex-1">{children}</main>
+    <html
+      className={`${inter.variable} ${fraunces.variable} ${jetbrains.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
+      <body className="bg-cream text-charcoal antialiased overflow-x-hidden">
+        {children}
       </body>
     </html>
   );
