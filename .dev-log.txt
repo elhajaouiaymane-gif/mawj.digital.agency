@@ -8,3 +8,1201 @@
 ✓ Ready in 3.7s
 
 ○ Compiling /[locale] ...
+ GET / 200 in 20.0s (next.js: 17.3s, proxy.ts: 31ms, application-code: 2.6s)
+ GET / 200 in 520ms (next.js: 69ms, proxy.ts: 41ms, application-code: 411ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:{...}, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html className="inter_7b06..." suppressHydrationWarning={true}>
+                          <head>
+                          <body
+                            className="bg-cream text-charcoal antialiased overflow-x-hidden"
+-                           __processed_cfd0a73f-feea-4d07-8720-72d1209e0756__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                            ...
+                              <RootProvider>
+                                <CustomCursor lenis={null}>
+                                  <motion.div style={{x:{...},y:{...}}} className="pointer-ev...">
+                                    <div
+                                      className="pointer-events-none fixed z-[9999] -translate-x-1/2 -translate-y-1/2 ..."
+                                      style={{transform:"none"}}
+                                      ref={function useMotionRef.useCallback}
+-                                     bis_skin_checked="1"
+                                    >
+                                      <motion.div animate={{width:32,height:32, ...}} transition={{duration:0.3}} ...>
+                                        <div
+                                          className="rounded-full border border-pearl"
+                                          style={{}}
+                                          ref={function useMotionRef.useCallback}
+-                                         bis_skin_checked="1"
+                                        >
+                                  <motion.div style={{x:{...},y:{...}}} className="pointer-ev...">
+                                    <div
+                                      className="pointer-events-none fixed z-[9999] -translate-x-1/2 -translate-y-1/2"
+                                      style={{transform:"none"}}
+                                      ref={function useMotionRef.useCallback}
+-                                     bis_skin_checked="1"
+                                    >
+                                      <motion.div animate={{scale:1}} className="h-1.5 w-1....">
+                                        <div
+                                          className="h-1.5 w-1.5 rounded-full bg-pearl"
+                                          style={{}}
+                                          ref={function useMotionRef.useCallback}
+-                                         bis_skin_checked="1"
+                                        >
+                                <Header lenis={null}>
+                                  <header className="fixed top-..." style={{...}}>
+                                    <a>
+                                    <div
+                                      className="flex items-center gap-6"
+-                                     bis_skin_checked="1"
+                                    >
+                                  ...
+                                <ScrollProgress>
+                                  <div
+                                    ref={{current:null}}
+                                    className="fixed top-0 left-0 right-0 z-[100] h-[2px] bg-cyan origin-left"
+                                    style={{transform:"scaleX(0)",opacity:0,transition:"opacity 0.3s"}}
+-                                   bis_skin_checked="1"
+                                  >
+                                  ...
+                                ...
+                                  <SegmentViewNode type="page" pagePath="[locale]/p...">
+                                    <SegmentTrieNode>
+                                    <Home>
+                                      ...
+                                        <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} ...>
+                                          <motion.div initial={{y:0}} animate={{y:0}} transition={{duration:0.8, ...}} ...>
+                                            <div
+                                              className="fixed inset-0 z-[9998] bg-cream text-charcoal flex flex-col i..."
+                                              style={{transform:"none"}}
+                                              ref={function useMotionRef.useCallback}
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="text-center"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="font-mono text-[10px] tracking-[0.3em] uppercase mb-4"
+-                                                 bis_skin_checked="1"
+                                                >
++                                                 Loading
+                                                <div
+                                                  className="heading-massive text-[clamp(5rem,20vw,12rem)] leading-non..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                                <div
+                                                  className="mt-8 font-mono text-[11px] tracking-[0.2em] text-charcoal/50"
+-                                                 bis_skin_checked="1"
+                                                >
++                                                 Hello, welcome to mawj!
+                                      <Hero>
+                                        <section id="hero" className="relative m...">
+                                          <div
+                                            ref={{current:null}}
+                                            className="pointer-events-none absolute inset-0 opacity-30"
+                                            style={{background:"radial-gra...",transition:"background..."}}
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="relative z-10 max-w-[90vw] md:max-w-[85vw]"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="chapter-label text-cyan mb-6 md:mb-10"
+-                                             bis_skin_checked="1"
+                                            >
++                                             Since 2024
+                                            <SplitText>
+                                            <div
+                                              className="mt-12 md:mt-20 font-mono text-[11px] tracking-[0.25em] upperc..."
+-                                             bis_skin_checked="1"
+                                            >
++                                             Scroll to explore ↓
+                                      <MarqueeStrip>
+                                        <div
+                                          ref={{current:null}}
+                                          className="relative overflow-hidden py-6 md:py-8 bg-charcoal"
+                                          style={{transform:"skewY(0deg)",transition:"transform ..."}}
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex whitespace-nowrap"
+-                                           bis_skin_checked="1"
+                                          >
+                                      <About>
+                                        <section ref={{current:null}} id="about" className="relative m...">
+                                          <div
+                                            className="w-full max-w-[90vw] md:max-w-[80vw] mx-auto"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="grid md:grid-cols-12 gap-10 md:gap-16"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="md:col-span-2"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="chapter-label text-cyan"
+-                                                 bis_skin_checked="1"
+                                                >
++                                                 1 About
+                                              <div
+                                                className="md:col-span-7"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <SplitText>
+                                                <div
+                                                  className="mt-12 md:mt-16 max-w-prose"
+-                                                 bis_skin_checked="1"
+                                                >
+                                              <div
+                                                className="md:col-span-3 md:pt-4"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="aspect-[3/4] bg-charcoal/5 rounded-sm overflow-hidden"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="w-full h-full bg-gradient-to-br from-cyan/10 to-ocean/20"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                      <MarqueeStrip>
+                                        <div
+                                          ref={{current:null}}
+                                          className="relative overflow-hidden py-6 md:py-8 bg-charcoal"
+                                          style={{transform:"skewY(0deg)",transition:"transform ..."}}
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex whitespace-nowrap"
+-                                           bis_skin_checked="1"
+                                          >
+                                      <Services>
+                                        <section id="services" className="section-pa...">
+                                          <div
+                                            className="max-w-[90vw] md:max-w-[80vw] mx-auto"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="grid md:grid-cols-12 gap-10 md:gap-16"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="md:col-span-2"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="chapter-label text-cyan"
+-                                                 bis_skin_checked="1"
+                                                >
++                                                 2 What We Do
+                                              <div
+                                                className="md:col-span-10 space-y-0"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="border-t border-charcoal/10 last:border-b"
+                                                  style={{backgroundColor:"transparent"}}
+-                                                 bis_skin_checked="1"
+                                                >
+                                                <div
+                                                  className="border-t border-charcoal/10 last:border-b"
+                                                  style={{backgroundColor:"transparent"}}
+-                                                 bis_skin_checked="1"
+                                                >
+                                                <div
+                                                  className="border-t border-charcoal/10 last:border-b"
+                                                  style={{backgroundColor:"transparent"}}
+-                                                 bis_skin_checked="1"
+                                                >
+                                      <MarqueeStrip>
+                                        <div
+                                          ref={{current:null}}
+                                          className="relative overflow-hidden py-6 md:py-8 bg-charcoal"
+                                          style={{transform:"skewY(0deg)",transition:"transform ..."}}
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex whitespace-nowrap"
+-                                           bis_skin_checked="1"
+                                          >
+                                      <FeaturedWork>
+                                        <section id="featured-work" className="section-pa...">
+                                          <div
+                                            className="max-w-[90vw] md:max-w-[80vw] mx-auto"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="grid md:grid-cols-12 gap-10 md:gap-16 mb-16 md:mb-24"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="md:col-span-2"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="chapter-label text-cyan"
+-                                                 bis_skin_checked="1"
+                                                >
++                                                 3 Featured work
+                                            <div
+                                              className="space-y-20 md:space-y-32"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <motion.div initial={{opacity:0,y:60}} whileInView={{opacity:1,y:0}} ...>
+                                                <div
+                                                  className={"group grid md:grid-cols-12 gap-6 md:gap-10 items-center "}
+                                                  style={{opacity:0,transform:"translateY..."}}
+                                                  ref={function useMotionRef.useCallback}
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className={"md:col-span-7 "}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden..."
+                                                      style={{backgroundColor:"#0A1F44"}}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="absolute inset-0 bg-gradient-to-br from-transparent..."
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                      <div
+                                                        className="absolute inset-0 flex items-center justify-center"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                  <div
+                                                    className={"md:col-span-4 md:col-start-9 "}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="font-mono text-[11px] tracking-[0.25em] uppercase tex..."
+-                                                     bis_skin_checked="1"
+                                                    >
++                                                     Brand Identity · Web Experience
+                                                    <h3>
+                                                    <div
+                                                      className="mt-6"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                              <motion.div initial={{opacity:0,y:60}} whileInView={{opacity:1,y:0}} ...>
+                                                <div
+                                                  className="group grid md:grid-cols-12 gap-6 md:gap-10 items-center m..."
+                                                  style={{opacity:0,transform:"translateY..."}}
+                                                  ref={function useMotionRef.useCallback}
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="md:col-span-7 md:order-2"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden..."
+                                                      style={{backgroundColor:"#00D4FF"}}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="absolute inset-0 bg-gradient-to-br from-transparent..."
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                      <div
+                                                        className="absolute inset-0 flex items-center justify-center"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                  <div
+                                                    className="md:col-span-4 md:col-start-9 md:order-1 md:col-start-2"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="font-mono text-[11px] tracking-[0.25em] uppercase tex..."
+-                                                     bis_skin_checked="1"
+                                                    >
++                                                     Digital Platform · Data Viz
+                                                    <h3>
+                                                    <div
+                                                      className="mt-6"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                              <motion.div initial={{opacity:0,y:60}} whileInView={{opacity:1,y:0}} ...>
+                                                <div
+                                                  className={"group grid md:grid-cols-12 gap-6 md:gap-10 items-center "}
+                                                  style={{opacity:0,transform:"translateY..."}}
+                                                  ref={function useMotionRef.useCallback}
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className={"md:col-span-7 "}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden..."
+                                                      style={{backgroundColor:"#FFB800"}}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="absolute inset-0 bg-gradient-to-br from-transparent..."
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                      <div
+                                                        className="absolute inset-0 flex items-center justify-center"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                  <div
+                                                    className={"md:col-span-4 md:col-start-9 "}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="font-mono text-[11px] tracking-[0.25em] uppercase tex..."
+-                                                     bis_skin_checked="1"
+                                                    >
++                                                     UI/UX · Motion
+                                                    <h3>
+                                                    <div
+                                                      className="mt-6"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                              <motion.div initial={{opacity:0,y:60}} whileInView={{opacity:1,y:0}} ...>
+                                                <div
+                                                  className="group grid md:grid-cols-12 gap-6 md:gap-10 items-center m..."
+                                                  style={{opacity:0,transform:"translateY..."}}
+                                                  ref={function useMotionRef.useCallback}
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="md:col-span-7 md:order-2"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden..."
+                                                      style={{backgroundColor:"#0D0D0D"}}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="absolute inset-0 bg-gradient-to-br from-transparent..."
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                      <div
+                                                        className="absolute inset-0 flex items-center justify-center"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                  <div
+                                                    className="md:col-span-4 md:col-start-9 md:order-1 md:col-start-2"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="font-mono text-[11px] tracking-[0.25em] uppercase tex..."
+-                                                     bis_skin_checked="1"
+                                                    >
++                                                     Campaign · Immersive
+                                                    <h3>
+                                                    <div
+                                                      className="mt-6"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                              <motion.div initial={{opacity:0,y:60}} whileInView={{opacity:1,y:0}} ...>
+                                                <div
+                                                  className={"group grid md:grid-cols-12 gap-6 md:gap-10 items-center "}
+                                                  style={{opacity:0,transform:"translateY..."}}
+                                                  ref={function useMotionRef.useCallback}
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className={"md:col-span-7 "}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden..."
+                                                      style={{backgroundColor:"#0A1F44"}}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="absolute inset-0 bg-gradient-to-br from-transparent..."
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                      <div
+                                                        className="absolute inset-0 flex items-center justify-center"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                  <div
+                                                    className={"md:col-span-4 md:col-start-9 "}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="font-mono text-[11px] tracking-[0.25em] uppercase tex..."
+-                                                     bis_skin_checked="1"
+                                                    >
++                                                     E-commerce · Brand
+                                                    <h3>
+                                                    <div
+                                                      className="mt-6"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                              <motion.div initial={{opacity:0,y:60}} whileInView={{opacity:1,y:0}} ...>
+                                                <div
+                                                  className="group grid md:grid-cols-12 gap-6 md:gap-10 items-center m..."
+                                                  style={{opacity:0,transform:"translateY..."}}
+                                                  ref={function useMotionRef.useCallback}
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="md:col-span-7 md:order-2"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden..."
+                                                      style={{backgroundColor:"#00D4FF"}}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="absolute inset-0 bg-gradient-to-br from-transparent..."
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                      <div
+                                                        className="absolute inset-0 flex items-center justify-center"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                  <div
+                                                    className="md:col-span-4 md:col-start-9 md:order-1 md:col-start-2"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="font-mono text-[11px] tracking-[0.25em] uppercase tex..."
+-                                                     bis_skin_checked="1"
+                                                    >
++                                                     Fintech · Web App
+                                                    <h3>
+                                                    <div
+                                                      className="mt-6"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                      <Statement>
+                                        <section id="statement" ref={{current:null}} className="relative m...">
+                                          <div
+                                            className="max-w-[85vw] text-center"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="absolute bottom-10 left-1/2 -translate-x-1/2 font-mono text-[10..."
+-                                           bis_skin_checked="1"
+                                          >
++                                           Mawj — Casablanca, Paris, Dubai
+                                      <Team>
+                                        <section id="team" className="section-pa...">
+                                          <div
+                                            className="max-w-[90vw] md:max-w-[80vw] mx-auto"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="grid md:grid-cols-12 gap-10 md:gap-16 mb-16 md:mb-24"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="md:col-span-2"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="chapter-label text-cyan"
+-                                                 bis_skin_checked="1"
+                                                >
++                                                 4 Our team
+                                              <div
+                                                className="md:col-span-6 md:col-start-4"
+-                                               bis_skin_checked="1"
+                                              >
+                                            <div
+                                              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="group"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="aspect-[3/4] bg-charcoal/5 rounded-sm overflow-hidden rel..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="absolute inset-0 bg-gradient-to-br from-charcoal/80 to-..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                ...
+                                              <div
+                                                className="group"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="aspect-[3/4] bg-charcoal/5 rounded-sm overflow-hidden rel..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="absolute inset-0 bg-gradient-to-br from-charcoal/80 to-..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                ...
+                                              <div
+                                                className="group"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="aspect-[3/4] bg-charcoal/5 rounded-sm overflow-hidden rel..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="absolute inset-0 bg-gradient-to-br from-charcoal/80 to-..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                ...
+                                              <div
+                                                className="group"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="aspect-[3/4] bg-charcoal/5 rounded-sm overflow-hidden rel..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="absolute inset-0 bg-gradient-to-br from-charcoal/80 to-..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                ...
+                                              <div
+                                                className="group"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="aspect-[3/4] bg-charcoal/5 rounded-sm overflow-hidden rel..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="absolute inset-0 bg-gradient-to-br from-charcoal/80 to-..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                ...
+                                              <div
+                                                className="group"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="aspect-[3/4] bg-charcoal/5 rounded-sm overflow-hidden rel..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="absolute inset-0 bg-gradient-to-br from-charcoal/80 to-..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                ...
+                                      <MarqueeStrip>
+                                        <div
+                                          ref={{current:null}}
+                                          className="relative overflow-hidden py-6 md:py-8 bg-charcoal"
+                                          style={{transform:"skewY(0deg)",transition:"transform ..."}}
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex whitespace-nowrap"
+-                                           bis_skin_checked="1"
+                                          >
+                                      <Clients>
+                                        <section id="clients" className="section-pa...">
+                                          <div
+                                            className="max-w-[90vw] md:max-w-[80vw] mx-auto"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="grid md:grid-cols-12 gap-10 md:gap-16 mb-16 md:mb-20"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="md:col-span-2"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="chapter-label text-cyan"
+-                                                 bis_skin_checked="1"
+                                                >
++                                                 5 They trust us
+                                            <div
+                                              className="space-y-0"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="group border-t border-pearl/10 last:border-b py-4 md:py-6 f..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="group border-t border-pearl/10 last:border-b py-4 md:py-6 f..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="group border-t border-pearl/10 last:border-b py-4 md:py-6 f..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="group border-t border-pearl/10 last:border-b py-4 md:py-6 f..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="group border-t border-pearl/10 last:border-b py-4 md:py-6 f..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="group border-t border-pearl/10 last:border-b py-4 md:py-6 f..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="group border-t border-pearl/10 last:border-b py-4 md:py-6 f..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="group border-t border-pearl/10 last:border-b py-4 md:py-6 f..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="group border-t border-pearl/10 last:border-b py-4 md:py-6 f..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="group border-t border-pearl/10 last:border-b py-4 md:py-6 f..."
+-                                               bis_skin_checked="1"
+                                              >
+                                      <Awards>
+                                        <section id="awards" className="section-pa...">
+                                          <div
+                                            className="max-w-[90vw] md:max-w-[80vw] mx-auto"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="grid md:grid-cols-12 gap-10 md:gap-16 mb-10"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="md:col-span-2"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="chapter-label text-cyan"
+-                                                 bis_skin_checked="1"
+                                                >
++                                                 6 Awards
+                                              <div
+                                                className="md:col-span-3 md:col-start-4"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="font-mono text-[11px] tracking-[0.25em] uppercase text-ch..."
+-                                                 bis_skin_checked="1"
+                                                >
++                                                 We are on
+                                            <div
+                                              className="space-y-0"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="group border-t border-charcoal/10 last:border-b py-4 md:py-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="group border-t border-charcoal/10 last:border-b py-4 md:py-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="group border-t border-charcoal/10 last:border-b py-4 md:py-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="group border-t border-charcoal/10 last:border-b py-4 md:py-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="group border-t border-charcoal/10 last:border-b py-4 md:py-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="group border-t border-charcoal/10 last:border-b py-4 md:py-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                      <CTA>
+                                        <section id="cta" className="relative m...">
+                                          <div
+                                            className="max-w-[90vw] mx-auto"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <h2>
+                                            <div
+                                              className="mt-12 md:mt-16"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="absolute inset-0 pointer-events-none"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w..."
+                                              style={{background:"radial-gra..."}}
+-                                             bis_skin_checked="1"
+                                            >
+                                      <ContactFooter>
+                                        <footer id="contact-fo..." className="relative s...">
+                                          <div
+                                            className="max-w-[90vw] md:max-w-[80vw] mx-auto"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="grid md:grid-cols-12 gap-10 md:gap-16 mb-20 md:mb-32"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="md:col-span-2"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="chapter-label text-cyan"
+-                                                 bis_skin_checked="1"
+                                                >
++                                                 7 Contact
+                                            <div
+                                              className="grid md:grid-cols-12 gap-10 md:gap-16 mb-20 md:mb-32"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="md:col-span-4"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="md:col-span-4"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="md:col-span-4"
+-                                               bis_skin_checked="1"
+                                              >
+                                            <div
+                                              className="grid md:grid-cols-12 gap-10 md:gap-16 mb-20 md:mb-32"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="md:col-span-4"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <h4>
+                                                <div
+                                                  className="flex gap-6 font-mono text-[12px] tracking-[0.15em] text-c..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                              <div
+                                                className="md:col-span-4 md:col-start-9"
+-                                               bis_skin_checked="1"
+                                              >
+                                            <div
+                                              className="border-t border-charcoal/10 pt-10 md:pt-16"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="heading-massive text-[clamp(6rem,25vw,20rem)] leading-[0.8]..."
+-                                               bis_skin_checked="1"
+                                              >
++                                               mawj
+                                              <div
+                                                className="mt-6 md:mt-10 flex flex-col md:flex-row md:items-end justif..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="flex items-baseline gap-3"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                          ...
+                  ...
+ 
+    at <unknown> (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+[browser] You are trying to animate backgroundColor from "rgba(0, 0, 0, 0)" to "transparent". "transparent" is not an animatable value.. For more information and steps for solving, visit https://motion.dev/troubleshooting/value-not-animatable (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2477:13)
+[browser] You are trying to animate backgroundColor from "transparent" to "rgba(0,212,255,0.15)". "transparent" is not an animatable value.. For more information and steps for solving, visit https://motion.dev/troubleshooting/value-not-animatable (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2477:13)
+[browser] You are trying to animate backgroundColor from "rgba(0,212,255,0.15)" to "transparent". "transparent" is not an animatable value.. For more information and steps for solving, visit https://motion.dev/troubleshooting/value-not-animatable (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2477:13)
+[browser] You are trying to animate backgroundColor from "transparent" to "rgba(0,212,255,0.15)". "transparent" is not an animatable value.. For more information and steps for solving, visit https://motion.dev/troubleshooting/value-not-animatable (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2477:13)
+[browser] You are trying to animate backgroundColor from "rgba(0,212,255,0.15)" to "transparent". "transparent" is not an animatable value.. For more information and steps for solving, visit https://motion.dev/troubleshooting/value-not-animatable (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2477:13)
+[browser] You are trying to animate backgroundColor from "transparent" to "rgba(0,212,255,0.15)". "transparent" is not an animatable value.. For more information and steps for solving, visit https://motion.dev/troubleshooting/value-not-animatable (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2477:13)
+[browser] You are trying to animate backgroundColor from "rgba(0,212,255,0.15)" to "transparent". "transparent" is not an animatable value.. For more information and steps for solving, visit https://motion.dev/troubleshooting/value-not-animatable (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2477:13)
+[browser] You are trying to animate backgroundColor from "transparent" to "rgba(0,212,255,0.15)". "transparent" is not an animatable value.. For more information and steps for solving, visit https://motion.dev/troubleshooting/value-not-animatable (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2477:13)
+[browser] You are trying to animate backgroundColor from "rgba(0,212,255,0.15)" to "transparent". "transparent" is not an animatable value.. For more information and steps for solving, visit https://motion.dev/troubleshooting/value-not-animatable (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2477:13)
+[browser] You are trying to animate backgroundColor from "transparent" to "rgba(0,212,255,0.15)". "transparent" is not an animatable value.. For more information and steps for solving, visit https://motion.dev/troubleshooting/value-not-animatable (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2477:13)
+[browser] You are trying to animate backgroundColor from "rgba(0,212,255,0.15)" to "transparent". "transparent" is not an animatable value.. For more information and steps for solving, visit https://motion.dev/troubleshooting/value-not-animatable (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2477:13)
+[browser] You are trying to animate backgroundColor from "transparent" to "rgba(0,212,255,0.15)". "transparent" is not an animatable value.. For more information and steps for solving, visit https://motion.dev/troubleshooting/value-not-animatable (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2477:13)
+[browser] You are trying to animate backgroundColor from "rgba(0,212,255,0.15)" to "transparent". "transparent" is not an animatable value.. For more information and steps for solving, visit https://motion.dev/troubleshooting/value-not-animatable (file://C:/Users/Aymane/Downloads/MAWJ agency/mawj-agency/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2477:13)
+  Reload env: .env.local
+✓ Compiled in 1057ms
+⨯ ./src/app/layout.tsx:3:1
+Module not found: Can't resolve '@vercel/analytics/react'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mMetadata[0m, [33mViewport[0m } [36mfrom[0m [32m"next"[0m;
+  [90m2 |[0m [36mimport[0m { [33mInter[0m, [33mFraunces[0m } [36mfrom[0m [32m"next/font/google"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mAnalytics[0m } [36mfrom[0m [32m"@vercel/analytics/react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m inter = [33mInter[0m({
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:3:1
+Module not found: Can't resolve '@vercel/analytics/react'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mMetadata[0m, [33mViewport[0m } [36mfrom[0m [32m"next"[0m;
+  [90m2 |[0m [36mimport[0m { [33mInter[0m, [33mFraunces[0m } [36mfrom[0m [32m"next/font/google"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mAnalytics[0m } [36mfrom[0m [32m"@vercel/analytics/react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m inter = [33mInter[0m({
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/sections/LeadForm.tsx:5:1
+Module not found: Can't resolve '@hookform/resolvers/zod'
+  [90m3 |[0m [36mimport[0m { useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { useForm } [36mfrom[0m [32m"react-hook-form"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { zodResolver } [36mfrom[0m [32m"@hookform/resolvers/zod"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { z } [36mfrom[0m [32m"zod"[0m;
+  [90m7 |[0m [36mimport[0m { motion, [33mAnimatePresence[0m } [36mfrom[0m [32m"framer-motion"[0m;
+  [90m8 |[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/sections/LeadForm.tsx
+    ./src/app/[locale]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/sections/LeadForm.tsx:5:1
+Module not found: Can't resolve '@hookform/resolvers/zod'
+  [90m3 |[0m [36mimport[0m { useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { useForm } [36mfrom[0m [32m"react-hook-form"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { zodResolver } [36mfrom[0m [32m"@hookform/resolvers/zod"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { z } [36mfrom[0m [32m"zod"[0m;
+  [90m7 |[0m [36mimport[0m { motion, [33mAnimatePresence[0m } [36mfrom[0m [32m"framer-motion"[0m;
+  [90m8 |[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/sections/LeadForm.tsx
+    ./src/app/[locale]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/sections/LeadForm.tsx:5:1
+Module not found: Can't resolve '@hookform/resolvers/zod'
+  [90m3 |[0m [36mimport[0m { useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { useForm } [36mfrom[0m [32m"react-hook-form"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { zodResolver } [36mfrom[0m [32m"@hookform/resolvers/zod"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { z } [36mfrom[0m [32m"zod"[0m;
+  [90m7 |[0m [36mimport[0m { motion, [33mAnimatePresence[0m } [36mfrom[0m [32m"framer-motion"[0m;
+  [90m8 |[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/sections/LeadForm.tsx
+    ./src/app/[locale]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/sections/LeadForm.tsx:5:1
+Module not found: Can't resolve '@hookform/resolvers/zod'
+  [90m3 |[0m [36mimport[0m { useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { useForm } [36mfrom[0m [32m"react-hook-form"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { zodResolver } [36mfrom[0m [32m"@hookform/resolvers/zod"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { z } [36mfrom[0m [32m"zod"[0m;
+  [90m7 |[0m [36mimport[0m { motion, [33mAnimatePresence[0m } [36mfrom[0m [32m"framer-motion"[0m;
+  [90m8 |[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/sections/LeadForm.tsx
+    ./src/app/[locale]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:3:1
+Module not found: Can't resolve '@vercel/analytics/react'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mMetadata[0m, [33mViewport[0m } [36mfrom[0m [32m"next"[0m;
+  [90m2 |[0m [36mimport[0m { [33mInter[0m, [33mFraunces[0m } [36mfrom[0m [32m"next/font/google"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mAnalytics[0m } [36mfrom[0m [32m"@vercel/analytics/react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m inter = [33mInter[0m({
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:3:1
+Module not found: Can't resolve '@vercel/analytics/react'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mMetadata[0m, [33mViewport[0m } [36mfrom[0m [32m"next"[0m;
+  [90m2 |[0m [36mimport[0m { [33mInter[0m, [33mFraunces[0m } [36mfrom[0m [32m"next/font/google"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mAnalytics[0m } [36mfrom[0m [32m"@vercel/analytics/react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m inter = [33mInter[0m({
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/sections/LeadForm.tsx:4:1
+Module not found: Can't resolve 'react-hook-form'
+  [90m2 |[0m
+  [90m3 |[0m [36mimport[0m { useState } [36mfrom[0m [32m"react"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { useForm } [36mfrom[0m [32m"react-hook-form"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { zodResolver } [36mfrom[0m [32m"@hookform/resolvers/zod"[0m;
+  [90m6 |[0m [36mimport[0m { z } [36mfrom[0m [32m"zod"[0m;
+  [90m7 |[0m [36mimport[0m { motion, [33mAnimatePresence[0m } [36mfrom[0m [32m"framer-motion"[0m;
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/sections/LeadForm.tsx
+    ./src/app/[locale]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/sections/LeadForm.tsx:4:1
+Module not found: Can't resolve 'react-hook-form'
+  [90m2 |[0m
+  [90m3 |[0m [36mimport[0m { useState } [36mfrom[0m [32m"react"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { useForm } [36mfrom[0m [32m"react-hook-form"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { zodResolver } [36mfrom[0m [32m"@hookform/resolvers/zod"[0m;
+  [90m6 |[0m [36mimport[0m { z } [36mfrom[0m [32m"zod"[0m;
+  [90m7 |[0m [36mimport[0m { motion, [33mAnimatePresence[0m } [36mfrom[0m [32m"framer-motion"[0m;
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/sections/LeadForm.tsx
+    ./src/app/[locale]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/sections/LeadForm.tsx:4:1
+Module not found: Can't resolve 'react-hook-form'
+  [90m2 |[0m
+  [90m3 |[0m [36mimport[0m { useState } [36mfrom[0m [32m"react"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { useForm } [36mfrom[0m [32m"react-hook-form"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { zodResolver } [36mfrom[0m [32m"@hookform/resolvers/zod"[0m;
+  [90m6 |[0m [36mimport[0m { z } [36mfrom[0m [32m"zod"[0m;
+  [90m7 |[0m [36mimport[0m { motion, [33mAnimatePresence[0m } [36mfrom[0m [32m"framer-motion"[0m;
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/sections/LeadForm.tsx
+    ./src/app/[locale]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/sections/LeadForm.tsx:4:1
+Module not found: Can't resolve 'react-hook-form'
+  [90m2 |[0m
+  [90m3 |[0m [36mimport[0m { useState } [36mfrom[0m [32m"react"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { useForm } [36mfrom[0m [32m"react-hook-form"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { zodResolver } [36mfrom[0m [32m"@hookform/resolvers/zod"[0m;
+  [90m6 |[0m [36mimport[0m { z } [36mfrom[0m [32m"zod"[0m;
+  [90m7 |[0m [36mimport[0m { motion, [33mAnimatePresence[0m } [36mfrom[0m [32m"framer-motion"[0m;
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/sections/LeadForm.tsx
+    ./src/app/[locale]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 296ms
+⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.100.166:3000
+- Environments: .env.local
+✓ Ready in 1452ms
+
+Persisting failed: Unable to open static sorted file referenced from 00000340.meta
+
+Caused by:
+    0: Unable to open static sorted file 00000339.sst
+    1: Failed to open SST file C:\Users\Aymane\Downloads\MAWJ agency\mawj-agency\.next\dev\cache/turbopack\ee6e79b1\00000339.sst
+    2: The system cannot find the file specified. (os error 2)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+
+thread 'tokio-runtime-worker' (10360) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 33 tasks
+
+Caused by:
+    0: Looking up typed data for 33 tasks from database failed
+    1: Unable to open static sorted file referenced from 00000323.meta
+    2: Unable to open static sorted file 00000322.sst
+    3: Failed to open SST file C:\Users\Aymane\Downloads\MAWJ agency\mawj-agency\.next\dev\cache/turbopack\ee6e79b1\00000322.sst
+    4: The system cannot find the file specified. (os error 2)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'tokio-runtime-worker' (11260) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:197:17:
+Failed to restore task data (corrupted database or bug): Data for TaskId 173160)
+
+Caused by:
+    0: Looking up task storage for TaskId 173160 from database failed
+    1: Unable to open static sorted file referenced from 00000323.meta
+    2: Unable to open static sorted file 00000322.sst
+    3: Failed to open SST file C:\Users\Aymane\Downloads\MAWJ agency\mawj-agency\.next\dev\cache/turbopack\ee6e79b1\00000322.sst
+    4: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (5452) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:197:17:
+Failed to restore task data (corrupted database or bug): Data for TaskId 170275)
+
+Caused by:
+    0: Looking up task storage for TaskId 170275 from database failed
+    1: Unable to open static sorted file referenced from 00000323.meta
+    2: Unable to open static sorted file 00000322.sst
+    3: Failed to open SST file C:\Users\Aymane\Downloads\MAWJ agency\mawj-agency\.next\dev\cache/turbopack\ee6e79b1\00000322.sst
+    4: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (5452) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:197:17:
+Failed to restore task data (corrupted database or bug): Data for TaskId 170275)
+
+Caused by:
+    0: Looking up task storage for TaskId 170275 from database failed
+    1: Unable to open static sorted file referenced from 00000323.meta
+    2: Unable to open static sorted file 00000322.sst
+    3: Failed to open SST file C:\Users\Aymane\Downloads\MAWJ agency\mawj-agency\.next\dev\cache/turbopack\ee6e79b1\00000322.sst
+    4: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (10360) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 33 tasks
+
+Caused by:
+    0: Looking up typed data for 33 tasks from database failed
+    1: Unable to open static sorted file referenced from 00000323.meta
+    2: Unable to open static sorted file 00000322.sst
+    3: Failed to open SST file C:\Users\Aymane\Downloads\MAWJ agency\mawj-agency\.next\dev\cache/turbopack\ee6e79b1\00000322.sst
+    4: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (11260) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:197:17:
+Failed to restore task data (corrupted database or bug): Data for TaskId 173160)
+
+Caused by:
+    0: Looking up task storage for TaskId 173160 from database failed
+    1: Unable to open static sorted file referenced from 00000323.meta
+    2: Unable to open static sorted file 00000322.sst
+    3: Failed to open SST file C:\Users\Aymane\Downloads\MAWJ agency\mawj-agency\.next\dev\cache/turbopack\ee6e79b1\00000322.sst
+    4: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (11260) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:197:17:
+Failed to restore task data (corrupted database or bug): Meta for TaskId 2213)
+
+Caused by:
+    0: Looking up task storage for TaskId 2213 from database failed
+    1: Unable to open static sorted file referenced from 00000286.meta
+    2: Unable to open static sorted file 00000282.sst
+    3: Failed to open SST file C:\Users\Aymane\Downloads\MAWJ agency\mawj-agency\.next\dev\cache/turbopack\ee6e79b1\00000282.sst
+    4: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (11260) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 12 tasks
+
+Caused by:
+    0: Looking up typed data for 12 tasks from database failed
+    1: Unable to open static sorted file referenced from 00000323.meta
+    2: Unable to open static sorted file 00000322.sst
+    3: Failed to open SST file C:\Users\Aymane\Downloads\MAWJ agency\mawj-agency\.next\dev\cache/turbopack\ee6e79b1\00000322.sst
+    4: The system cannot find the file specified. (os error 2)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)

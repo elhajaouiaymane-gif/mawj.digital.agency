@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Fraunces, JetBrains_Mono } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const inter = Inter({
@@ -16,55 +17,47 @@ const fraunces = Fraunces({
   style: ["normal", "italic"],
 });
 
-const jetbrains = JetBrains_Mono({
-  variable: "--font-jetbrains",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500"],
-});
-
 export const metadata: Metadata = {
-  title: "Mawj Digital Agency | We craft digital waves that move the world.",
+  title: "Mawj Digital Agency | Création de sites web premium au Maroc",
   description:
-    "Award-winning editorial creative studio based in Casablanca, Paris & Dubai. We craft work that defines the now and shapes what is next.",
+    "Agence web à Casablanca. On conçoit des sites web premium pour les entreprises marocaines : landing pages, sites vitrines, e-commerce. Devis gratuit en 48h.",
   keywords: [
-    "Mawj", "digital agency", "creative studio", "Casablanca",
-    "web design", "editorial design", "Morocco", "Paris", "Dubai",
+    "agence web maroc", "création site web casablanca", "site web maroc",
+    "développement web maroc", "landing page maroc", "e-commerce maroc",
+    "agence digitale casablanca", "création site internet maroc",
   ],
   authors: [{ name: "Mawj Digital Agency" }],
   openGraph: {
-    title: "Mawj Digital Agency",
-    description: "We craft digital waves that move the world.",
+    title: "Mawj Digital Agency | Sites web premium au Maroc",
+    description:
+      "Agence web à Casablanca. Landing pages, sites vitrines et e-commerce pour les entreprises marocaines. Devis gratuit en 48h.",
     type: "website",
-    locale: "en_US",
-    siteName: "Mawj",
+    locale: "fr_FR",
+    siteName: "Mawj Digital Agency",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mawj Digital Agency",
-    description: "We craft digital waves that move the world.",
+    title: "Mawj Digital Agency | Sites web premium au Maroc",
+    description:
+      "Agence web à Casablanca. Landing pages, sites vitrines et e-commerce pour les entreprises marocaines.",
   },
   robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#F5F1E8",
-  colorScheme: "light",
+  themeColor: "#0a0a0a",
+  colorScheme: "dark",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      className={`${inter.variable} ${fraunces.variable} ${jetbrains.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang="fr" className={`${inter.variable} ${fraunces.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className="bg-cream text-charcoal antialiased overflow-x-hidden">
+      <body className="bg-neutral-950 text-white antialiased overflow-x-hidden">
         {children}
+        <Analytics />
       </body>
     </html>
   );
